@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Lâmpada Liga/Desliga</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+
+		body{
+			height: 100%;
+		}
+
+		.bg{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background-color: black;
+			height: 100vh;
+		}
+
+		
+		.bots{
+			display: inline-block;
+			
+		}
+
+		button{
+			width: 90px;
+			height: 30px;
+			margin: 0 15px;
+		}
+	</style>
+</head>
+<body>
+
+	<main id="fund" class="bg">
+	</br></br></br></br>
+		<img id="lamp" class="img" src="lamp-desligada.png" width="250px">
+	</br></br>
+	<div class="bots">
+		<button id="lampOn" onclick="ligarLamp()">Ligar</button>
+		<button id="lampOff" onclick="desligarLamp()">Desligar</button>
+	</div>
+	</main>
+
+<script>
+	function ligarLamp(){
+		const lamp = document.getElementById('lamp');
+		lamp.src = 'lamp-ligada.png';
+		document.getElementById('fund').style.backgroundColor = 'white';
+	}
+
+	function desligarLamp(){
+		const lamp = document.getElementById('lamp');
+		lamp.src = 'lamp-desligada.png';
+		document.getElementById('fund').style.backgroundColor = 'black';
+	}
+
+
+</script>
+</body>
+</html>
